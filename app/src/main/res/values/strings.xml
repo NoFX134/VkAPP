@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">VkApp</string>
+    <string name="login_enter">Войти</string>
+    <string name="login_hello">Пожалуйста, нажмите кнопку \"Войти\"</string>
+    <string name="enter_you_query">Enter you query</string>
+    <string name="friends_no_item">У вас нет друзей</string>
+    <string name="loading_error">Ошибка входа в VK</string>
+    <string name="name">%1$s %2$s</string>
+    <string name="city_null">"Город не указан"</string>
+    <integer name="com_vk_sdk_AppId">8172313</integer>
+</resources>
