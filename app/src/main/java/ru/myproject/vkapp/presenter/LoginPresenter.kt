@@ -32,7 +32,7 @@ class LoginPresenter : MvpPresenter<LoginView>() {
                 viewState.openFriends()
                         }
             is VKAuthenticationResult.Failed -> {
-               viewState.showError(R.string.login_enter)
+               viewState.showError(com.vk.sdk.api.R.string.vk_message_login_error)
             }
         }
     }

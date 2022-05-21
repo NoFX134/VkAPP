@@ -6,13 +6,14 @@ import ru.myproject.vkapp.R
 import ru.myproject.vkapp.models.FriendsModel
 import ru.myproject.vkapp.provider.FriendsProvider
 import ru.myproject.vkapp.views.FriendsView
+import java.lang.Error
 
 
 @InjectViewState
 class FriendsPresenter : MvpPresenter<FriendsView>() {
     fun loadFriends() {
         viewState.startLoading()
-        FriendsProvider(this).testLoadFriends(true)
+        FriendsProvider(this).loadFriends()
     }
 
     fun friendsLoaded(friendsList: ArrayList<FriendsModel>) {
@@ -23,5 +24,8 @@ class FriendsPresenter : MvpPresenter<FriendsView>() {
         } else {
             viewState.setupFriendsList(friendsList)
         }
+    }
+    fun showError(errorResource: Int){
+        viewState.showError(errorResource)
     }
 }
