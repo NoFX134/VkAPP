@@ -77,9 +77,9 @@ class FriendsProvider(var presenter: FriendsPresenter) {
                             surname = it.lastName ?: "",
                             city = it.city?.title,
                             avatar = it.photo200Orig,
-                            isOnline = it.onlineMobile==BaseBoolInt.YES
+                            isOnline = (it.onlineMobile == BaseBoolInt.YES) && (it.online == BaseBoolInt.YES)
                         )
-                    friendsList.add(friends)
+                        friendsList.add(friends)
                     }
                     presenter.friendsLoaded(friendsList)
                 }
